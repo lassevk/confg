@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorComponents().AddInteractiveServerComponents();
 builder.Services.AddDataProtection()
-   .PersistKeysToFileSystem(new DirectoryInfo("/app/dp-keys"))
+   .PersistKeysToFileSystem(new DirectoryInfo("/data/dp-keys"))
    .SetApplicationName("Confg.Web");
 
 var app = builder.Build();
