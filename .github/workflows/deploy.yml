@@ -38,7 +38,7 @@ jobs:
       - name: Deploy application
         run: |
           rm -rf /mnt/secure1/confg/application/*
-          cp -r ./* /mnt/secure1/confg/application
+          cp -r ./publish/* /mnt/secure1/confg/application
 
       - name: Start Docker Compose services
         working-directory: /mnt/secure1/confg
