@@ -10,9 +10,12 @@ jobs:
     runs-on: [ self-hosted, arxas ]
 
     steps:
+      - name: Checkout code
       - uses: actions/checkout@v4
+        with:
+          submodules: recursive
 
-      - name: Setup .NET
+      - name: Setup .NET 10
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '10.0.x'
